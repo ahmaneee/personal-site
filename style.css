@@ -1,21 +1,54 @@
-*
-{
-   margin: 0;
-   padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.content
-{font-family: good-times;
+.content {
+    font-family: good-times;
     font-size: 11rem;
     line-height: 10rem;
+    color: rgb(189, 172, 222);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.avatar {
+    height: 200px;
+    width: auto;
+    flex: 1;
+}
+
+body {
     background-color: black;
-    color:rgb(189, 172, 222);
+    height: 100vh;
+    padding: 1rem;
 }
 
-body{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+
+/* Place breakpoints here so you don't run into specifity issues */
+
+@media only screen and (max-width: 1200px) {
+    /* Large desktop */
+    .content {
+        font-size: 9rem;
+        line-height: 8rem;
+    }
+    .container {
+        display: block;
+    }
+    .avatar {
+        padding: 10px;
+    }
 }
 
+@media only screen and (max-width: 600px) {
+    /* Tablet and smaller */
+    .content {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+}
